@@ -1,393 +1,1196 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Audith Soluções | Indenização para Motoristas de Aplicativo</title>
-
-<meta
-name="description"
-content="Motoristas de Uber, 99, iFood, Rappi e Motoboys podem ter direito à indenização. Faça uma análise gratuita com especialistas."/>
-
+<title>Audith Soluções | Indenização para motoristas e entregadores de aplicativo</title>
+<meta name="description" content="Trabalha com Uber, 99, iFood ou Rappi e sofreu um acidente? Você pode ter direito a até R$150.000 em indenização. Fale agora com a Audith Soluções pelo WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+    :root{
+    --blue: #0B5FA5;
+    --blue-dark: #083B73;
+    --green: #2ECC71;
+    --green-dark: #25A85C;
+    --yellow: #FFC83D;
+    --yellow-dark: #E8AC12;
+    --white: #FFFFFF;
+    --gray-light: #F3F6FA;
+    --gray-mid: #E4E9EF;
+    --ink: #0E1F30;
+    --ink-soft: #4C5E70;
+    --radius-lg: 16px;
+    --radius-btn: 10px;
+    --shadow: 0 12px 30px -10px rgba(8,59,115,0.18);
+    --shadow-soft: 0 6px 18px -8px rgba(8,59,115,0.12);
+    --container: 1200px;
+  }
+ 
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  button{font-family:inherit;cursor:pointer;border:none;}
+ 
+  .container{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:0 24px;
+  }
+ 
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+ 
+  /* Buttons */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 28px;
+    border-radius:var(--radius-btn);
+    font-weight:700;
+    font-size:16px;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(0.98);}
+  .btn-green{
+    background:var(--green);
+    color:#ffffff;
+    box-shadow:0 10px 24px -8px rgba(46,204,113,0.55);
+  }
+  .btn-green:hover{background:var(--green-dark);}
+  .btn-green-lg{
+    padding:20px 36px;
+    font-size:18px;
+  }
+  .btn-white{
+    background:var(--white);
+    color:var(--blue-dark);
+    border:1.5px solid rgba(255,255,255,0.6);
+  }
+  .btn-white:hover{background:#f2f6fb;}
+  .btn-blue-outline{
+    background:transparent;
+    border:1.5px solid var(--blue);
+    color:var(--blue);
+    padding:10px 18px;
+    font-size:14px;
+    border-radius:8px;
+  }
+  .btn-blue-outline:hover{background:var(--blue);color:#fff;}
+  .btn-blue-solid{
+    background:var(--blue);
+    color:#fff;
+    padding:12px 20px;
+    font-size:14px;
+    border-radius:8px;
+  }
+  .btn-blue-solid:hover{background:var(--blue-dark);}
+ 
+  .wa-icon{width:20px;height:20px;flex-shrink:0; color: white;}
+ 
+  /* NAVBAR */
+  header.nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--gray-mid);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:76px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:900;
+    font-size:20px;
+    color:var(--blue-dark);
+  }
+  .logo-mark{
+    width:94px;height:94x;border-radius:10px;
+   
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:900;font-size:16px;
+  }
+  .logo span{color:var(--ink-soft);font-weight:600;font-size:13px;display:block;margin-top:-2px;}
+  nav.menu{
+    display:flex;
+    gap:32px;
+  }
+  nav.menu a{
+    font-size:15px;
+    font-weight:600;
+    color:var(--ink-soft);
+    transition:color .15s;
+  }
+  nav.menu a:hover{color:var(--blue);}
+  .nav-cta{display:flex;align-items:center;gap:16px;}
+  .menu-toggle{display:none;background:none;padding:6px;}
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px;}
+ 
+  /* HERO */
+  .hero{
+    background:linear-gradient(135deg,var(--blue) 0%, var(--blue-dark) 100%);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    padding:64px 0 0;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    width:640px;height:640px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    top:-200px;right:-150px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:40px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+  }
+  .hero-eyebrow{color:var(--yellow);}
+  .hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--yellow);}
+  .hero h1{
+    font-size:46px;
+    font-weight:900;
+    line-height:1.12;
+    letter-spacing:-0.02em;
+    margin:18px 0 20px;
+  }
+  .hero-highlight{
+    display:inline-block;
+    background:var(--yellow);
+    color:#ffffff;
+    font-weight:800;
+    font-size:17px;
+    padding:14px 20px;
+    border-radius:12px;
+    margin-bottom:22px;
+    box-shadow:var(--shadow-soft);
+    line-height:1.35;
+  }
+  .hero-highlight strong{font-size:20px;}
+  .hero p.sub{
+    font-size:16px;
+    color:#DCEAFB;
+    max-width:480px;
+    margin-bottom:30px;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px;}
+  .hero-trust{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:10px;
+    margin-bottom: 20px;
+  }
+  .avatar-stack{display:flex;}
+  .avatar-stack .av{
+    width:38px;height:38px;border-radius:50%;
+    border:2.5px solid var(--blue-dark);
+    margin-left:-10px;
+    background:linear-gradient(140deg,#fff,#cfe0f2);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:13px;color:var(--blue-dark);
+  }
+  .avatar-stack .av:first-child{margin-left:0;}
+  .hero-trust .txt{font-size:13.5px;color:#CFE1F5;}
+  .hero-trust .txt b{color:#fff ; }
+ 
+  .hero-visual{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    padding:20px 0 40px;
+  }
+  .hero-illustration{
+    width:100%;
+    max-width:460px;
+  }
+ 
+  /* Composição de fotos com máscara: um "buraco" recortado (clip-path) na foto de trás, no lugar onde a foto da frente encosta, simula o vão sem usar border */
+  .photo-composition{
+    position:relative;
+    width:100%;
+    max-width:380px;
+    height:420px;
+  }
+  .photo-blob-bg{
+    position:absolute;
+    top:20px;
+    left:-16px;
+    width:160px;
+    height:190px;
+    border-radius:28px;
+    background:linear-gradient(150deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
+    z-index:0;
+  }
+  .photo-mask{
+    position:absolute;
+  }
+  .photo-mask img,
+  .photo-mask .ph-fallback{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .photo-mask-a{
+    top:-60px;
+    left: -40px;
+    width:450px;
+    height:380px;
+    z-index:1;
+    /* retângulo arredondado normal, com um recorte (evenodd) no canto onde a foto B encosta, deixando o vão à mostra */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 52.4%, 66.2% 51.9%, 66.4% 100%, 0% 100%);
+  }
+  .photo-mask-b{
+    bottom:-30px;
+    right:-200px;
+    width:310px;
+    height:300px;
+    z-index:2;
+    overflow:hidden;
+    box-shadow:0 20px 44px -14px rgba(0,0,0,0.45);
+    clip-path: polygon(0.2% 15.9%, 0% 0%, 18.1% 0%, 100% 0%, 100% 61.4%, 100% 100%, 65.6% 100%, 0% 100%);
+  }
+  .ph-fallback{
+    background:linear-gradient(150deg,#E7F0FB,#C9DDF3);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .ph-fallback svg{width:38%;height:38%;opacity:0.55;}
+  .floating-card{
+    position:absolute;
+    background:#fff;
+    color:var(--ink);
+    border-radius:14px;
+    padding:14px 16px;
+    box-shadow:0 16px 40px -12px rgba(0,0,0,0.35);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:13.5px;
+    animation:floaty 4s ease-in-out infinite;
+    z-index: 10;
+  }
+  .floating-card.card-1{top:-15%; left:-40%;}
+  .floating-card.card-2{bottom:10%; right:-4%; animation-delay:1.2s;}
+  .floating-card .ic{
+    width:34px;height:34px;border-radius:8px;
+    background:var(--green);
+    display:flex;align-items:center;justify-content:center;
+    color:#04321A;
+    flex-shrink:0;
+  }
+  @keyframes floaty{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .floating-card{animation:none;}
+  }
+ 
+  /* SECTION generic */
+  section{padding:88px 0;}
+  .section-head{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 48px;
+  }
+  .section-head .eyebrow{color:var(--blue);}
+  .section-head .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--blue);}
+  .section-head h2{
+    font-size:32px;
+    font-weight:900;
+    color:var(--blue-dark);
+    letter-spacing:-0.01em;
+    margin:14px 0 12px;
+  }
+  .section-head p{color:var(--ink-soft);font-size:15.5px;}
+ 
+  /* Quem pode receber */
+  .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+  }
+  .profile-card{
+    background:#fff;
+    border:1px solid var(--gray-mid);
+    border-radius:var(--radius-lg);
+    padding:28px 24px;
+    text-align:center;
+    box-shadow:var(--shadow-soft);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .profile-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .profile-icon{
+    width:64px;height:64px;
+    border-radius:50%;
+    margin:0 auto 16px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .profile-icon img{
+    border-radius:6%;
+  }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  .profile-card h3{font-size:17px;font-weight:800;margin-bottom:8px;color:var(--ink);}
+  .profile-card p{font-size:14px;color:var(--ink-soft);margin-bottom:16px;}
+ 
+  /* Como funciona */
+  .how{background:var(--gray-light);}
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    position:relative;
+  }
+  .steps::before{
+    content:"";
+    position:absolute;
+    top:calc(100%/2);
+    left:calc(100%/6);
+    right:calc(100%/6);
+    height:26px;
+    background-image:linear-gradient(to right, var(--blue) 50%, transparent 0%);
+    background-size:30px 8px;
+    background-repeat:repeat-x;
+    opacity:0.35;
+    z-index:0;
+  }
+  .step-card{
+    background:#fff;
+    border-radius:var(--radius-lg);
+    padding:30px 26px;
+    box-shadow:var(--shadow-soft);
+    position:relative;
+    z-index:1;
+  }
+  .step-num{
+    width:52px;height:52px;
+    border-radius:50%;
+    background:var(--blue);
+    color:#fff;
+    font-weight:900;
+    font-size:20px;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:18px;
+  }
+  .step-card h3{font-size:18px;font-weight:800;margin-bottom:10px;}
+  .step-card p{color:var(--ink-soft);font-size:14.5px;margin-bottom:18px;}
+ 
+  /* Benefícios */
+  .benefits{
+    background:linear-gradient(120deg,var(--blue-dark), var(--blue));
+    border-radius:28px;
+    color:#fff;
+    padding:56px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  .benefits-visual{
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 20px 50px -20px rgba(0,0,0,0.5);
+  }
+  .benefits h2{font-size:28px;font-weight:900;margin-bottom:18px;}
+  .check-list{margin-bottom:26px;}
+  .check-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    font-size:15px;
+    color:#EAF2FC;
+    padding:9px 0;
+  }
+  .check-list .chk{
+    width:22px;height:22px;
+    border-radius:50%;
+    background:var(--green);
+    color:#04321A;
+    flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;
+    font-weight:900;
+    margin-top:1px;
+  }
+ 
+  /* Depoimentos */
+  .testimonials{background:linear-gradient(180deg,var(--blue-dark), var(--blue));}
+  .testimonials .section-head h2, .testimonials .section-head p{color:#fff;}
+  .testimonials .section-head .eyebrow{color:var(--yellow);}
+  .testimonials .section-head .eyebrow .dot{background:var(--yellow);}
+  .t-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .t-card{
+    background:#fff;
+    border-radius:var(--radius-lg);
+    padding:26px;
+    box-shadow:var(--shadow);
+  }
+  .stars{color:var(--yellow-dark);font-size:15px;letter-spacing:2px;margin-bottom:12px;}
+  .t-card p.quote{font-size:14.5px;color:var(--ink-soft);margin-bottom:18px;}
+  .t-person{display:flex;align-items:center;gap:12px;}
+  .t-av{
+    width:42px;height:42px;border-radius:50%;
+    background:var(--gray-light);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;color:var(--blue-dark);font-size:14px;
+  }
+  .t-person .name{font-weight:700;font-size:14px;}
+  .t-person .role{font-size:12.5px;color:var(--ink-soft);}
+ 
+  /* FAQ */
+  .faq-list{max-width:760px;margin:0 auto;}
+  .faq-item{
+    border:1px solid var(--gray-mid);
+    border-radius:14px;
+    margin-bottom:14px;
+    overflow:hidden;
+    background:#fff;
+  }
+  .faq-q{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 22px;
+    font-weight:700;
+    font-size:15.5px;
+    cursor:pointer;
+  }
+  .faq-q .plus{
+    width:26px;height:26px;flex-shrink:0;
+    border-radius:50%;
+    background:var(--gray-light);
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;font-weight:900;color:var(--blue);
+    transition:transform .2s ease;
+  }
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--blue);color:#fff;}
+  .faq-a{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .25s ease;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .faq-a-inner{padding:0 22px 20px;}
+  .faq-item.open .faq-a{max-height:240px;}
+ 
+  /* Contato */
+  .contact{background:linear-gradient(135deg,var(--blue-dark), var(--blue));color:#fff;}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:56px;
+  }
+  .contact h2{font-size:30px;font-weight:900;margin-bottom:14px;}
+  .contact > .container > .contact-grid > div p.lead{color:#DCEAFB;margin-bottom:28px;font-size:15px;}
+  .contact-info-list{margin-bottom:20px;}
+  .contact-info-list li{
+    display:flex;align-items:center;gap:14px;
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+    font-size:14.5px;
+  }
+  .contact-info-list .ic{
+    width:38px;height:38px;border-radius:10px;
+    background:rgba(255,255,255,0.12);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .contact-form{
+    background:#fff;
+    border-radius:var(--radius-lg);
+    padding:32px;
+    color:var(--ink);
+    box-shadow:var(--shadow);
+  }
+  .contact-form h3{font-size:18px;font-weight:800;margin-bottom:4px;}
+  .contact-form p.hint{font-size:13.5px;color:var(--ink-soft);margin-bottom:20px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+  .form-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  .form-field label{font-size:13px;font-weight:700;color:var(--ink-soft);}
+  .form-field input, .form-field select{
+    border:1.5px solid var(--gray-mid);
+    border-radius:9px;
+    padding:12px 14px;
+    font-size:14.5px;
+    font-family:inherit;
+    color:var(--ink);
+  }
+  .form-field input:focus, .form-field select:focus{
+    outline:2px solid var(--blue);
+    outline-offset:1px;
+    border-color:var(--blue);
+  }
+  .contact-form .btn{width:100%;margin-top:6px;}
+ 
+  /* Footer */
+  footer{
+    background:var(--blue-dark);
+    color:#BFD4EC;
+    padding:32px 0;
+  }
+  .footer-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:14px;
+    font-size:13px;
+  }
+  .footer-inner .flogo{
+    display:flex;align-items:center;gap:8px;
+    font-weight:800;color:#fff;font-size:15px;
+  }
+  .footer-links{display:flex;gap:20px;}
+  .footer-links a:hover{color:#fff;}
+ 
+  /* Floating WhatsApp button (persistent CTA) */
+  .wa-float{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    z-index:200;
+    background:var(--green);
+    color:#ffffff;
+    width:64px;height:64px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 14px 30px -8px rgba(46,204,113,0.6);
+  }
+  .wa-float::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:var(--green);
+    animation:pulse-ring 2.2s cubic-bezier(0.4,0,0.6,1) infinite;
+    z-index:-1;
+  }
+  @keyframes pulse-ring{
+    0%{transform:scale(1);opacity:0.55;}
+    100%{transform:scale(1.9);opacity:0;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .wa-float::before{animation:none;}
+  }
 
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+ 
+  /* Responsive */
+ @media (max-width:960px){
 
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  
+  .footer-links{display: none;}
+  .nav-cta{
+display:none;
+}
+.hero-visual{
+  display: none;
+}
 
-<link rel="stylesheet" href="css/style.css">
+.photo-mask-b{
+display:none;
+}
 
-<link rel="stylesheet" href="css/responsive.css">
+.photo-blob-bg{
+display:none;
+}
 
+.ph-fallback svg{
+display:none;
+} 
+.hero-grid{
+  display:flex;
+flex-direction:column-reverse;
+}
+
+.hero-ctas{
+  display:flex;
+flex-direction:column;
+}
+ .form-row{display:flex; flex-direction:column;margin-bottom:14px;}
+.hero-trust{
+  display:flex;
+flex-direction:column;
+}
+
+.cards-grid{
+  display:flex;
+flex-direction:column;
+}
+
+.steps{
+  display:flex;
+flex-direction:column;
+
+}
+
+.benefits{
+  display:flex;
+flex-direction:column-reverse;
+}
+
+.contact-grid{
+  display:flex;
+flex-direction:column;
+}
+.t-grid{
+
+   grid-template-columns:repeat(1,1fr);
+
+overflow-x:auto;
+
+scroll-snap-type:x mandatory;
+
+}
+.footer-inner{
+flex-direction:column;
+display:flex;
+text-align:center;
+gap:24px;
+
+}
+
+
+
+header.nav{
+    height:72px;
+    background:rgba(255,255,255,.97);
+    backdrop-filter:blur(18px);
+    border-bottom:none;
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
+}
+
+.nav-inner{
+    height:72px;
+}
+
+.logo-mark{
+    width:82px;
+}
+
+.nav-cta{
+    display:none;
+}
+ 
+    .menu{
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        padding: 24px;
+        background: #fff;
+        border-bottom: 1px solid #E4E9EF;
+        box-shadow: 0 18px 40px rgba(0,0,0,.08);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+
+        transition:
+            opacity .28s ease,
+            transform .28s ease,
+            visibility .28s;
+
+        pointer-events: none;
+    }
+
+    .menu.open{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+
+.menu-toggle{
+    width:46px;
+    height:46px;
+    position:relative;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    display: flex;
+}
+
+.menu-toggle span{
+    position:absolute;
+    left:11px;
+
+    width:24px;
+    height:2px;
+
+    background:#16324F;
+    border-radius:10px;
+
+    transition:.3s ease;
+}
+
+.menu-toggle span:nth-child(1){
+    top:14px;
+}
+
+.menu-toggle span:nth-child(2){
+    top:22px;
+}
+
+.menu-toggle span:nth-child(3){
+    top:30px;
+}
+
+.menu-toggle.active span:nth-child(1){
+    top:22px;
+    transform:rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+    opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+    top:22px;
+    transform:rotate(-45deg);
+}
+}
+
+  @media (max-width:600px){
+    section{padding:60px 0;}
+    .cards-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:30px;}
+    .section-head h2{font-size:26px;}
+  }
+</style>
 </head>
-
 <body>
 
-<header>
-
-<div class="container">
-
-<div class="logo">
-
-<img src="assets/logo.svg">
-
-</div>
-
-<nav>
-
-<a href="#inicio">Início</a>
-
-<a href="#beneficios">Benefícios</a>
-
-<a href="#como-funciona">Como funciona</a>
-
-<a href="#depoimentos">Depoimentos</a>
-
-<a href="#faq">FAQ</a>
-
-</nav>
-
-<a class="btn-whatsapp">
-
-<i class="fab fa-whatsapp"></i>
-
-Falar no WhatsApp
-
-</a>
-
-</div>
-
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark"><img src="/assets/logo-branca.png"></span>
+    </a>
+    <nav class="menu">
+      <a href="#quem-pode">Quem pode receber</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/5511999999999" class="btn btn-green" target="_blank" rel="noopener">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.2 1.28-1.98 1.44-.53.11-1.22.2-3.55-.76-2.98-1.24-4.9-4.26-5.05-4.46-.15-.2-1.2-1.6-1.2-3.05 0-1.45.75-2.16 1.02-2.46.24-.27.62-.4.99-.4h.35c.11 0 .27-.01.42.33.18.42.6 1.46.65 1.57.05.11.09.24.02.39-.07.15-.11.24-.22.37-.11.13-.24.29-.34.39-.11.11-.23.23-.1.46.13.24.6.99 1.29 1.61.88.79 1.63 1.04 1.87 1.16.24.11.38.09.52-.05.15-.15.62-.72.79-.97.16-.24.33-.2.55-.12.22.08 1.42.67 1.66.79.24.11.4.17.46.27.06.11.06.6-.18 1.29Z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
 </header>
 
-<section class="hero" id="inicio">
-
-<div class="container hero-grid">
-
-<div class="hero-content">
-
-<span class="badge">
-
-Especialistas em indenizações
-
-</span>
-
-<h1>
-
-Trabalha com Uber,
-99, iFood ou Rappi
-e sofreu um acidente?
-
-</h1>
-
-<p>
-
-Você pode ter direito a uma indenização de até
-<strong>R$150.000</strong>,
-mesmo recebendo INSS.
-
-</p>
-
-<div class="hero-buttons">
-
-<a class="btn-primary">
-
-Quero saber se tenho direito
-
-</a>
-
-<a class="btn-secondary">
-
-Como funciona
-
-</a>
-
-</div>
-
-<div class="hero-numbers">
-
-<div>
-
-<h3>+900</h3>
-
-<p>Atendimentos</p>
-
-</div>
-
-<div>
-
-<h3>98%</h3>
-
-<p>Satisfação</p>
-
-</div>
-
-<div>
-
-<h3>100%</h3>
-
-<p>Online</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<img src="assets/images/hero.png">
-
-</div>
-
-</div>
-
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow hero-eyebrow"><span class="dot"></span> Motoristas e entregadores de aplicativo</div>
+      <h1>Trabalha com Uber, 99 ou iFood e sofreu um acidente?</h1>
+      <div class="hero-highlight">
+        Você pode ter direito a até <strong>R$ 250.000</strong> em indenizações.
+      </div>
+      <p class="sub">A Audith Soluções analisa seu caso gratuitamente e cuida de todo o processo para você. Sem burocracia, sem custo inicial e com atendimento 100% humano.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/5511999999999" class="btn btn-green btn-green-lg" target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.2 1.28-1.98 1.44-.53.11-1.22.2-3.55-.76-2.98-1.24-4.9-4.26-5.05-4.46-.15-.2-1.2-1.6-1.2-3.05 0-1.45.75-2.16 1.02-2.46.24-.27.62-.4.99-.4h.35c.11 0 .27-.01.42.33.18.42.6 1.46.65 1.57.05.11.09.24.02.39-.07.15-.11.24-.22.37-.11.13-.24.29-.34.39-.11.11-.23.23-.1.46.13.24.6.99 1.29 1.61.88.79 1.63 1.04 1.87 1.16.24.11.38.09.52-.05.15-.15.62-.72.79-.97.16-.24.33-.2.55-.12.22.08 1.42.67 1.66.79.24.11.4.17.46.27.06.11.06.6-.18 1.29Z"/></svg>
+          Quero saber se tenho direito
+        </a>
+        <a href="#como-funciona" class="btn btn-white">Ver como funciona</a>
+      </div>
+      <div class="hero-trust">
+        <div class="avatar-stack">
+          <div class="av">JM</div>
+          <div class="av">RC</div>
+          <div class="av">TS</div>
+        </div>
+        <div class="txt"><b>+2.400 motoristas</b> já foram atendidos pela Audith</div>
+      </div>
+    </div>
+ 
+    <div class="hero-visual">
+      <div class="photo-composition">
+        <div class="photo-blob-bg" aria-hidden="true"></div>
+ 
+        <!-- FOTO A: troque o conteúdo do <img> abaixo pela foto real (ex: motorista) -->
+        <div class="photo-mask photo-mask-a">
+           <img src="assets/motorista-hero2.jpg" alt="Entregador de aplicativo">
+          <div class="ph-fallback">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#0B5FA5" stroke-width="1.6"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke="#0B5FA5" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+ 
+        <!-- FOTO B: troque o conteúdo do <img> abaixo pela foto real (ex: entregador) -->
+        <div class="photo-mask photo-mask-b">
+         
+          <div class="ph-fallback">
+             <img src="assets/motorista-hero1.jpg" alt="Entregador de aplicativo">
+          </div>
+        </div>
+ 
+        <div class="floating-card card-1">
+          <div class="ic">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#ffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          Análise 100% gratuita
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- QUEM PODE RECEBER -->
+<section id="quem-pode">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> Elegibilidade</div>
+      <h2>Quem pode receber a indenização</h2>
+      <p>Se você se encaixa em um dos perfis abaixo e sofreu um acidente durante o trabalho, você pode ter direito.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="profile-card">
+        <div class="profile-icon">
+          <img src="/assets/uber.jpg" alt="">
+        </div>
+        <h3>Motoristas Uber</h3>
+        <p>Sofreu acidente durante uma corrida ou a caminho de um passageiro.</p>
+        <a href="https://wa.me/5511999999999" class="btn btn-blue-solid" target="_blank" rel="noopener">Falar agora</a>
+      </div>
+      <div class="profile-card">
+        <div class="profile-icon">
+          <img src="/assets/99logo.jpg" alt="">
+        </div>
+        <h3>Motoristas 99</h3>
+        <p>Acidentes de trânsito durante deslocamentos ativos no aplicativo.</p>
+        <a href="https://wa.me/5511999999999" class="btn btn-blue-solid" target="_blank" rel="noopener">Falar agora</a>
+      </div>
+      <div class="profile-card">
+        <div class="profile-icon">
+            <img src="/assets/ifood.png" alt="">
+        </div>
+        <h3>Entregadores iFood</h3>
+        <p>Quedas de moto ou bicicleta durante entregas registradas.</p>
+        <a href="https://wa.me/5511999999999" class="btn btn-blue-solid" target="_blank" rel="noopener">Falar agora</a>
+      </div>
+      <div class="profile-card">
+        <div class="profile-icon">
+            <img src="/assets/rappi.png" alt="">
+        </div>
+        <h3>Entregadores Rappi</h3>
+        <p>Acidentes com o veículo durante rotas ativas de entrega.</p>
+        <a href="https://wa.me/5511999999999" class="btn btn-blue-solid" target="_blank" rel="noopener">Falar agora</a>
+      </div>
+     
+    </div>
+  </div>
 </section>
 
-<section class="apps">
-
-<div class="container">
-
-<h2>
-
-Quem atendemos
-
-</h2>
-
-<div class="apps-grid">
-
-<div class="card">
-
-<i class="fa-solid fa-car"></i>
-
-<h3>Uber</h3>
-
-<p>Motoristas parceiros.</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-taxi"></i>
-
-<h3>99</h3>
-
-<p>Motoristas parceiros.</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-motorcycle"></i>
-
-<h3>iFood</h3>
-
-<p>Entregadores.</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-box"></i>
-
-<h3>Rappi</h3>
-
-<p>Entregadores.</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-truck"></i>
-
-<h3>Lalamove</h3>
-
-<p>Motoristas.</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-road"></i>
-
-<h3>Motoboys</h3>
-
-<p>Autônomos.</p>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- COMO FUNCIONA -->
+<section class="how" id="como-funciona">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> Processo simples</div>
+      <h2>Como funciona o atendimento</h2>
+      <p>Três passos para saber se você tem direito à indenização — sem sair de casa.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Você fala com a gente</h3>
+        <p>Envia uma mensagem pelo WhatsApp e conta rapidamente o que aconteceu.</p>
+        <a href="https://wa.me/5511999999999" class="btn btn-green" target="_blank" rel="noopener">Iniciar conversa</a>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Analisamos seu caso</h3>
+        <p>Nossa equipe avalia gratuitamente se você tem direito e qual o valor estimado.</p>
+        <a href="https://wa.me/5511999999999" class="btn btn-green" target="_blank" rel="noopener">Enviar meu caso</a>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Você recebe o valor</h3>
+        <p>Cuidamos de todo o processo até o pagamento da sua indenização.</p>
+        <a href="https://wa.me/5511999999999" class="btn btn-green" target="_blank" rel="noopener">Quero começar</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="como-funciona" class="steps">
-
-<div class="container">
-
-<h2>
-
-Como funciona
-
-</h2>
-
-<div class="steps-grid">
-
-<div class="step">
-
-<span>01</span>
-
-<h3>
-
-Envie sua documentação
-
-</h3>
-
-</div>
-
-<div class="step">
-
-<span>02</span>
-
-<h3>
-
-Nossa equipe analisa
-
-</h3>
-
-</div>
-
-<div class="step">
-
-<span>03</span>
-
-<h3>
-
-Receba todo acompanhamento
-
-</h3>
-
-</div>
-
-<div class="step">
-
-<span>04</span>
-
-<h3>
-
-Receba sua indenização
-
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- BENEFÍCIOS -->
+<section>
+  <div class="container">
+    <div class="benefits">
+      <div>
+        <div class="eyebrow" style="color:var(--yellow);"><span class="dot" style="background:var(--yellow);"></span> Por que a Audith</div>
+        <h2>Cuidamos de tudo para você focar em se recuperar</h2>
+        <ul class="check-list">
+          <li><span class="chk">✓</span> Análise do seu caso 100% gratuita</li>
+          <li><span class="chk">✓</span> Você só paga se o processo for ganho</li>
+          <li><span class="chk">✓</span> Acompanhamento humano do início ao fim</li>
+          <li><span class="chk">✓</span> Atendimento rápido pelo WhatsApp</li>
+        </ul>
+        <a href="https://wa.me/5511999999999" class="btn btn-green" target="_blank" rel="noopener">Quero ser atendido</a>
+      </div>
+      <div class="benefits-visual">
+        <img src="/assets/motorista-esperto.jpg" alt="">
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="beneficios" class="benefits">
-
-<div class="container">
-
-<h2>
-
-Por que escolher a Audith?
-
-</h2>
-
-<div class="benefits-grid">
-
-<div>
-
-✔ Atendimento Online
-
-</div>
-
-<div>
-
-✔ Especialistas
-
-</div>
-
-<div>
-
-✔ Atendimento Nacional
-
-</div>
-
-<div>
-
-✔ Sem burocracia
-
-</div>
-
-<div>
-
-✔ Processo transparente
-
-</div>
-
-<div>
-
-✔ WhatsApp durante todo atendimento
-
-</div>
-
-</div>
-
-</div>
-
+<!-- DEPOIMENTOS -->
+<section class="testimonials" id="depoimentos">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> Avaliações Google</div>
+      <h2>Quem confiou, recomenda</h2>
+      <p>Histórias reais de motoristas e entregadores atendidos pela Audith Soluções.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Sofri um acidente de moto fazendo entrega e não sabia que tinha direito a nada. A Audith cuidou de tudo e fui muito bem atendido."</p>
+        <div class="t-person">
+          <div class="t-av">JP</div>
+          <div><div class="name">João Pereira</div><div class="role">Entregador iFood</div></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Processo rápido e explicado direitinho, tudo pelo WhatsApp mesmo. Recomendo para quem trabalha de motorista."</p>
+        <div class="t-person">
+          <div class="t-av">RC</div>
+          <div><div class="name">Renata Costa</div><div class="role">Motorista Uber</div></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Fiquei surpreso com o valor que recebi. A equipe acompanhou cada etapa e nunca fiquei sem resposta."</p>
+        <div class="t-person">
+          <div class="t-av">TS</div>
+          <div><div class="name">Thiago Santos</div><div class="role">Motorista 99</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="cta">
-
-<div class="container">
-
-<h2>
-
-Descubra gratuitamente se você possui direito à indenização.
-
-</h2>
-
-<a class="btn-primary">
-
-Solicitar análise gratuita
-
-</a>
-
-</div>
-
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> Dúvidas frequentes</div>
+      <h2>Perguntas que todo motorista faz</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q"><span>Preciso pagar alguma coisa para começar?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Não. A análise inicial do seu caso é 100% gratuita e você só paga se o processo for ganho.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Preciso estar com o aplicativo ligado no momento do acidente?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Cada caso é avaliado individualmente. Envie os detalhes pelo WhatsApp e nossa equipe verifica se você tem direito.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Quanto tempo demora para receber a indenização?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">O prazo varia de acordo com cada caso. Assim que iniciamos o processo, você recebe atualizações regulares.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Já faz tempo que sofri o acidente, ainda posso solicitar?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Em muitos casos sim. Fale com a nossa equipe para entender o prazo aplicável à sua situação.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>O atendimento é feito por advogados?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">A Audith conta com uma equipe especializada que cuida de todo o processo de ponta a ponta para você.</div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- CONTATO -->
+<section class="contact" id="contato">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow" style="color:var(--yellow);"><span class="dot" style="background:var(--yellow);"></span> Fale com a gente</div>
+      <h2>Atendimento rápido, direto e humano</h2>
+      <p class="lead">Escolha o canal que preferir. Nossa equipe responde rapidinho.</p>
+      <ul class="contact-info-list">
+        <li>
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Z" stroke="#fff" stroke-width="1.6"/></svg></div>
+          WhatsApp: (11) 99999-9999
+        </li>
+        <li>
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.6"/></svg></div>
+          Instagram: @audithsolucoes
+        </li>
+        <li>
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 4h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V4Z" stroke="#fff" stroke-width="1.6"/></svg></div>
+          Facebook: /audithsolucoes
+        </li>
+        <li>
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          Seg a sáb, 8h às 20h
+        </li>
+      </ul>
+      <a href="https://wa.me/5511999999999" class="btn btn-green" target="_blank" rel="noopener">Chamar no WhatsApp agora</a>
+    </div>
+
+    <div class="contact-form">
+      <h3>Peça sua análise gratuita</h3>
+      <p class="hint">Preencha e entraremos em contato pelo WhatsApp.</p>
+      <form id="leadForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="nome">Nome completo</label>
+            <input id="nome" type="text" placeholder="Seu nome" required>
+          </div>
+          <div class="form-field">
+            <label for="tel">WhatsApp</label>
+            <input id="tel" type="tel" placeholder="(00) 00000-0000" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="app">Você trabalha com qual aplicativo?</label>
+          <select id="app" required>
+            <option value="">Selecione</option>
+            <option>Uber</option>
+            <option>99</option>
+            <option>iFood</option>
+            <option>Rappi</option>
+            <option>Motoboy / Particular</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="msg">Conte rapidamente o que aconteceu</label>
+          <input id="msg" type="text" placeholder="Ex: sofri um acidente de moto em..." required>
+        </div>
+        <button type="submit" class="btn btn-green">Enviar e falar no WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-
-<div class="container">
-
-<p>
-
-© Audith Soluções
-
-</p>
-
-</div>
-
+  <div class="container footer-inner">
+    <div class="flogo"> <a href="#" class="logo">
+      <span class="logo-mark"><img src="/assets/logo-branca.png"></span>
+    </a>
+    <br><br>
+    <div class="footer-links">
+      <a href="#quem-pode">Quem pode receber</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div>© 2026 Audith Soluções. Todos os direitos reservados.</div>
+  </div>
 </footer>
 
-<script src="js/app.js"></script>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/5511999999999" class="wa-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.2 1.28-1.98 1.44-.53.11-1.22.2-3.55-.76-2.98-1.24-4.9-4.26-5.05-4.46-.15-.2-1.2-1.6-1.2-3.05 0-1.45.75-2.16 1.02-2.46.24-.27.62-.4.99-.4h.35c.11 0 .27-.01.42.33.18.42.6 1.46.65 1.57.05.11.09.24.02.39-.07.15-.11.24-.22.37-.11.13-.24.29-.34.39-.11.11-.23.23-.1.46.13.24.6.99 1.29 1.61.88.79 1.63 1.04 1.87 1.16.24.11.38.09.52-.05.15-.15.62-.72.79-.97.16-.24.33-.2.55-.12.22.08 1.42.67 1.66.79.24.11.4.17.46.27.06.11.06.6-.18 1.29Z"/></svg>
+</a>
+
+<script>
+  // Mobile menu
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+toggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  menu.classList.toggle('open');
+    toggle.classList.toggle('active');
+});
+
+// Fecha ao clicar em um link
+menu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.classList.remove('active');
+  });
+});
+
+// Fecha clicando fora
+document.addEventListener('click', (e) => {
+  if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+    menu.classList.remove('open');
+     toggle.classList.remove('active');"'"
+  }
+});
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Lead form -> redirect to WhatsApp with prefilled message
+  document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const tel = document.getElementById('tel').value;
+    const app = document.getElementById('app').value;
+    const msg = document.getElementById('msg').value;
+    const texto = `Olá! Meu nome é ${nome}, trabalho com ${app} e gostaria de uma análise gratuita. WhatsApp para contato: ${tel}. Resumo: ${msg}`;
+    const url = `https://wa.me/5511999999999?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  });
+</script>
 
 </body>
-
 </html>
